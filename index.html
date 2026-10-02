@@ -3,596 +3,835 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aditya Deshpande — DevSecOps &amp; Cloud Platform Engineer</title>
-<meta name="description" content="Aditya Deshpande, DevSecOps and cloud platform engineer in Bengaluru. Sole owner of cloud infrastructure and security across 10 AWS accounts and 65 microservices at a regulated lender.">
+<title>Aditya Deshpande — Cloud Platform &amp; DevSecOps Engineer</title>
+<meta name="description" content="Aditya Deshpande, cloud platform and DevSecOps engineer in Bengaluru. Sole owner of infrastructure and security across 10 AWS accounts and 65 microservices at a regulated lender.">
 <meta name="author" content="Aditya Deshpande">
-<meta name="theme-color" content="#0c1922">
+<meta name="theme-color" content="#060c13">
 <link rel="canonical" href="https://addsh.github.io/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Aditya Deshpande — DevSecOps &amp; Cloud Platform Engineer">
-<meta property="og:description" content="Six years building AWS infrastructure that is fast enough for engineers and defensible enough for regulators.">
+<meta property="og:title" content="Aditya Deshpande — Cloud Platform &amp; DevSecOps Engineer">
+<meta property="og:description" content="I build AWS platforms that are fast enough for engineers and defensible enough for regulators.">
 <meta property="og:url" content="https://addsh.github.io/">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c1922'/><text y='73' x='50' text-anchor='middle' font-size='64' font-family='Georgia,serif' fill='%23e8b974'>A</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23060c13'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='ui-monospace,monospace' fill='%23e8b974'>a</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0c1922;
-  --bg-2:#112330;
-  --fg:#e6edf2;
-  --fg-dim:#8ba3b5;
-  --rule:#1f3a4b;
-  --rule-soft:#172c3a;
-  --brass:#e8b974;
-  --oxblood:#c86a5e;
-  --measure:36rem;
-  --page:52rem;
+  --bg:#060c13; --bg-2:#0c1520; --bg-3:#111d2b;
+  --fg:#e8eef5; --fg-dim:#8ea3b8; --fg-faint:#5d7187;
+  --line:#1b2b3c; --line-soft:#152232;
+  --brass:#e8b974; --teal:#4fd1c5; --rose:#e07a6b;
+  --page:68rem; --measure:40rem;
 }
 :root[data-theme="light"]{
-  --bg:#edeff2;
-  --bg-2:#e4e8ec;
-  --fg:#10222e;
-  --fg-dim:#56707f;
-  --rule:#c6cfd7;
-  --rule-soft:#d8dee4;
-  --brass:#9a6b1e;
-  --oxblood:#8c2f2f;
+  --bg:#f4f6f9; --bg-2:#ffffff; --bg-3:#eef1f5;
+  --fg:#0d1823; --fg-dim:#4a5f73; --fg-faint:#73879a;
+  --line:#d8dee6; --line-soft:#e4e9ef;
+  --brass:#8a5c12; --teal:#0f7a70; --rose:#a8402f;
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#edeff2; --bg-2:#e4e8ec; --fg:#10222e; --fg-dim:#56707f;
-    --rule:#c6cfd7; --rule-soft:#d8dee4; --brass:#9a6b1e; --oxblood:#8c2f2f;
+    --bg:#f4f6f9; --bg-2:#ffffff; --bg-3:#eef1f5;
+    --fg:#0d1823; --fg-dim:#4a5f73; --fg-faint:#73879a;
+    --line:#d8dee6; --line-soft:#e4e9ef;
+    --brass:#8a5c12; --teal:#0f7a70; --rose:#a8402f;
   }
 }
-
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:Spectral,Georgia,'Times New Roman',serif;
-  font-size:17px;
-  line-height:1.65;
-  overflow-x:hidden;
-}
-@media (min-width:60rem){ body{font-size:18px} }
-
-a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
-a:hover{border-bottom-color:var(--brass);color:var(--brass)}
-:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16.5px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media (min-width:64rem){body{font-size:17px}}
 .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
-
-.skip{position:absolute;left:-9999px;top:0;background:var(--bg-2);padding:.6rem 1rem;z-index:30;border:1px solid var(--rule)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--bg-2);padding:.6rem 1rem;z-index:60;border:1px solid var(--line);border-radius:6px}
 .skip:focus{left:1rem;top:1rem}
 
-/* ---------- scroll rule + controls ---------- */
-#progress{
-  position:fixed;left:0;top:0;height:2px;width:0%;
-  background:var(--brass);z-index:20;
-  transition:width .08s linear;
-}
-.controls{
-  position:fixed;right:1rem;top:1rem;z-index:21;
-  display:flex;gap:.4rem;
-}
-.ctl{
-  width:2.1rem;height:2.1rem;
-  display:grid;place-items:center;
-  background:var(--bg-2);
-  color:var(--fg-dim);
-  border:1px solid var(--rule);
-  border-radius:50%;
-  cursor:pointer;
-  font-size:.8rem;
-  line-height:1;
-  padding:0;
-  font-family:inherit;
-}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.veil{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 55% at 50% 0%, transparent 0%, var(--bg) 80%)}
+.wrap{position:relative;z-index:2}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:.75rem clamp(1rem,4vw,2.5rem);
+  background:color-mix(in srgb, var(--bg) 84%, transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .3s ease}
+nav.stuck{border-bottom-color:var(--line-soft)}
+.brand{font-size:.84rem;color:var(--brass);white-space:nowrap}
+.brand .cursor{display:inline-block;width:.5em;height:1em;background:var(--brass);vertical-align:-.15em;margin-left:.2em;animation:blink 1.1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.brand .cursor{animation:none}}
+.navlinks{display:none;gap:.25rem}
+@media (min-width:58rem){.navlinks{display:flex}}
+.navlinks a{font-size:.8rem;color:var(--fg-dim);padding:.35rem .65rem;border-radius:5px;transition:color .2s,background .2s}
+.navlinks a:hover{color:var(--fg);background:var(--bg-3)}
+.navlinks a.active{color:var(--brass)}
+.navtools{display:flex;gap:.4rem}
+.ctl{width:2rem;height:2rem;display:grid;place-items:center;background:transparent;color:var(--fg-faint);
+  border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:.75rem;line-height:1;padding:0;
+  font-family:inherit;transition:color .2s,border-color .2s}
 .ctl:hover{color:var(--brass);border-color:var(--brass)}
 .ctl[aria-pressed="true"]{color:var(--brass);border-color:var(--brass)}
+#progress{position:fixed;left:0;top:0;height:2px;width:0%;z-index:55;
+  background:linear-gradient(90deg,var(--teal),var(--brass));transition:width .08s linear}
 
-/* ---------- page frame ---------- */
-.sheet{max-width:var(--page);margin:0 auto;padding:0 1.25rem 6rem;position:relative}
-@media (min-width:48rem){
-  .sheet{padding:0 4rem 8rem}
-  .sheet::before{
-    content:"";position:absolute;left:2.6rem;top:0;bottom:0;width:1px;
-    background:linear-gradient(to bottom,transparent,var(--oxblood) 6%,var(--oxblood) 94%,transparent);
-    opacity:.5;
-  }
-}
+.shell{max-width:var(--page);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+section{scroll-margin-top:4.5rem}
+.band{padding:5.5rem 0}
+@media (min-width:56rem){.band{padding:7rem 0}}
+.eyebrow{font-size:.74rem;letter-spacing:.2em;color:var(--teal);margin:0 0 .7rem}
+h2{font-size:clamp(1.6rem,4.2vw,2.3rem);font-weight:600;letter-spacing:-.022em;margin:0 0 .6rem;line-height:1.14}
+.sub{color:var(--fg-dim);max-width:var(--measure);margin:0 0 2.6rem;font-size:1rem}
+.rule{width:3rem;height:2px;background:linear-gradient(90deg,var(--teal),var(--brass));margin:0 0 1.5rem;border-radius:2px}
 
-/* ---------- hero ---------- */
-.hero{min-height:min(84vh,46rem);display:flex;flex-direction:column;justify-content:center;padding:5rem 0 3rem}
-.hero-kicker{
-  font-size:.78rem;letter-spacing:.14em;color:var(--brass);
-  margin:0 0 1.4rem;
-}
-.name{
-  font-size:clamp(2.4rem,9vw,4.6rem);
-  font-weight:300;line-height:1;letter-spacing:-.025em;margin:0;
-}
-.name em{font-style:normal;font-weight:600}
-.role{margin:1.1rem 0 0;font-size:clamp(1rem,2.6vw,1.22rem);color:var(--fg-dim);font-style:italic;max-width:30rem}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6rem 0 3rem}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.76rem;color:var(--fg-dim);
+  border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;margin:0 0 1.6rem;width:max-content}
+.dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--teal);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--teal) 55%,transparent)}70%{box-shadow:0 0 0 .5rem transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+h1{font-size:clamp(2.5rem,8.5vw,5.2rem);font-weight:700;letter-spacing:-.04em;line-height:.98;margin:0}
+h1 .grad{background:linear-gradient(100deg,var(--teal),var(--brass));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-line{margin:1.4rem 0 0;font-size:clamp(1.02rem,2.5vw,1.3rem);color:var(--fg-dim);max-width:34rem;line-height:1.55}
 
-.figure-wrap{margin:3.5rem 0 0;border-top:1px solid var(--rule);padding-top:2rem}
-.figure-row{display:flex;align-items:flex-end;gap:1.5rem;flex-wrap:wrap}
-.figure-now{
-  font-size:clamp(2.8rem,11vw,5.4rem);
-  font-weight:300;line-height:.9;letter-spacing:-.035em;
-  font-variant-numeric:tabular-nums lining-nums;
-  font-feature-settings:"tnum" 1,"lnum" 1;
-  color:var(--brass);
-  display:block;
-}
-#growth{width:min(13rem,42vw);height:auto;flex:0 0 auto;overflow:visible}
-.spark-line{fill:none;stroke:var(--brass);stroke-width:1.6;stroke-linecap:round}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin:3.2rem 0 0;
+  background:var(--line-soft);border:1px solid var(--line-soft);border-radius:10px;overflow:hidden}
+@media (min-width:46rem){.metrics{grid-template-columns:repeat(4,1fr)}}
+.metric{background:var(--bg);padding:1.2rem 1.1rem}
+.metric .n{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:600;letter-spacing:-.03em;color:var(--brass);
+  font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.metric .l{font-size:.76rem;color:var(--fg-faint);margin-top:.25rem;display:block;line-height:1.35}
+
+.spark-row{display:flex;align-items:center;gap:1rem;margin:1.6rem 0 0;flex-wrap:wrap}
+#growth{width:min(11rem,38vw);height:auto;overflow:visible;flex:0 0 auto}
+.spark-line{fill:none;stroke:var(--brass);stroke-width:1.8;stroke-linecap:round}
 .spark-dot{fill:var(--brass)}
-.spark-base{stroke:var(--rule);stroke-width:1}
-.spark-label{font-size:7px;fill:var(--fg-dim)}
-.figure-caption{margin:1.1rem 0 0;max-width:var(--measure);font-size:1.02rem}
-.figure-caption b{color:var(--fg);font-weight:500;font-variant-numeric:tabular-nums}
+.spark-base{stroke:var(--line);stroke-width:1}
+.spark-label{font-size:7px;fill:var(--fg-faint);font-family:'JetBrains Mono',monospace}
+.spark-note{font-size:.84rem;color:var(--fg-faint);max-width:22rem}
+.scroll-hint{margin:3rem 0 0;font-size:.74rem;color:var(--fg-faint);display:flex;align-items:center;gap:.6rem}
+.scroll-hint i{display:block;width:1px;height:2rem;background:linear-gradient(var(--line),transparent)}
 
-.scroll-hint{margin:3rem 0 0;font-size:.8rem;color:var(--fg-dim);display:flex;align-items:center;gap:.5rem}
-.scroll-hint .bar{display:block;width:1.8rem;height:1px;background:var(--rule)}
+.pillars{display:grid;gap:1rem}
+@media (min-width:52rem){.pillars{grid-template-columns:repeat(3,1fr);gap:1.1rem}}
+.pillar{border:1px solid var(--line-soft);border-radius:12px;padding:1.5rem 1.4rem;background:var(--bg-2);
+  transition:border-color .25s ease,transform .25s ease}
+.pillar:hover{border-color:var(--line);transform:translateY(-3px)}
+.pillar .ico{font-size:1rem;margin-bottom:.8rem;display:block;color:var(--teal)}
+.pillar h3{font-size:1.06rem;font-weight:600;margin:0 0 .5rem}
+.pillar p{margin:0 0 1rem;font-size:.92rem;color:var(--fg-dim)}
+.pillar ul{margin:0;padding:.9rem 0 0;list-style:none;border-top:1px solid var(--line-soft)}
+.pillar li{font-size:.82rem;color:var(--fg-faint);display:flex;justify-content:space-between;gap:1rem;padding:.22rem 0}
+.pillar li b{color:var(--fg);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
 
-/* ---------- sections ---------- */
-.block{margin:5.5rem 0 0;scroll-margin-top:3rem}
-h2{
-  font-size:.82rem;letter-spacing:.12em;font-weight:500;color:var(--brass);
-  margin:0 0 1.6rem;padding-bottom:.55rem;border-bottom:1px solid var(--rule-soft);
+.cases{display:grid;gap:1rem}
+@media (min-width:56rem){.cases{grid-template-columns:1fr 1fr;gap:1.1rem}}
+.case{border:1px solid var(--line-soft);border-radius:12px;background:var(--bg-2);overflow:hidden;align-self:start}
+.case > summary{list-style:none;cursor:pointer;padding:1.3rem 1.4rem;position:relative;transition:background .2s}
+.case > summary::-webkit-details-marker{display:none}
+.case > summary:hover{background:var(--bg-3)}
+.case-sev{font-size:.68rem;letter-spacing:.12em;color:var(--rose);display:block;margin-bottom:.45rem}
+.case h3{font-size:1rem;font-weight:600;margin:0 0 .35rem;padding-right:1.8rem}
+.case .sym{font-size:.88rem;color:var(--fg-dim);margin:0}
+.case > summary::after{content:"";position:absolute;right:1.4rem;top:1.55rem;width:.52rem;height:.52rem;
+  border-right:1.5px solid var(--fg-faint);border-bottom:1.5px solid var(--fg-faint);transform:rotate(45deg);transition:transform .22s ease}
+.case[open] > summary::after{transform:rotate(225deg)}
+.case[open] > summary{background:var(--bg-3)}
+.case-body{padding:0 1.4rem 1.4rem;animation:unfold .25s ease}
+@media (prefers-reduced-motion:reduce){.case-body,.tl-body{animation:none}}
+@keyframes unfold{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.trace{margin:0;padding:0 0 0 1.1rem;list-style:none;border-left:1px solid var(--line)}
+.trace li{position:relative;font-size:.87rem;color:var(--fg-dim);padding:.4rem 0}
+.trace li::before{content:"";position:absolute;left:-1.42rem;top:.95em;width:.42rem;height:.42rem;border-radius:50%;background:var(--line);border:1px solid var(--bg-2)}
+.trace li:last-child::before{background:var(--teal)}
+.trace li b{color:var(--fg);font-weight:600}
+.verdict{margin:1rem 0 0;padding:.8rem 1rem;border-radius:8px;background:var(--bg);border:1px solid var(--line-soft);font-size:.87rem;color:var(--fg)}
+.verdict span{color:var(--teal);font-size:.7rem;letter-spacing:.12em;display:block;margin-bottom:.3rem}
+
+.timeline{position:relative}
+@media (min-width:56rem){
+  .timeline::before{content:"";position:absolute;left:50%;top:.5rem;bottom:.5rem;width:1px;
+    background:linear-gradient(var(--teal),var(--line),var(--brass));transform:translateX(-50%);opacity:.5}
+  .tl-item{width:calc(50% - 2.2rem);margin-bottom:1.6rem}
+  .tl-item:nth-child(odd){margin-left:auto}
+  .tl-item::before{content:"";position:absolute;top:1.6rem;width:.62rem;height:.62rem;border-radius:50%;
+    background:var(--bg);border:1.5px solid var(--teal);z-index:2}
+  .tl-item:nth-child(odd)::before{left:-2.51rem}
+  .tl-item:nth-child(even)::before{right:-2.51rem}
+  .tl-item::after{content:"";position:absolute;top:1.88rem;width:1.7rem;height:1px;background:var(--line)}
+  .tl-item:nth-child(odd)::after{left:-2.2rem}
+  .tl-item:nth-child(even)::after{right:-2.2rem}
 }
-h2 .num{color:var(--fg-dim);margin-right:.8rem;font-size:.78rem}
-p{margin:0 0 1.15rem;max-width:var(--measure)}
-p:last-child{margin-bottom:0}
-.lede{font-size:clamp(1.12rem,2.8vw,1.35rem);line-height:1.5;font-weight:300}
-.lede b{font-weight:500;color:var(--brass)}
+.tl-item{position:relative;margin-bottom:1rem}
+.tl-card{border:1px solid var(--line-soft);border-radius:12px;background:var(--bg-2);overflow:hidden}
+.tl-card > summary{list-style:none;cursor:pointer;padding:1.2rem 1.3rem;transition:background .2s}
+.tl-card > summary::-webkit-details-marker{display:none}
+.tl-card > summary:hover{background:var(--bg-3)}
+.tl-when{font-size:.74rem;color:var(--teal);display:block;margin-bottom:.4rem}
+.tl-role{font-size:1rem;font-weight:600;margin:0 0 .2rem}
+.tl-org{font-size:.86rem;color:var(--fg-dim);margin:0}
+.tl-more{font-size:.72rem;color:var(--fg-faint);margin:.7rem 0 0;display:flex;align-items:center;gap:.4rem}
+.tl-more::before{content:"";width:.42rem;height:.42rem;border-right:1.2px solid currentColor;border-bottom:1.2px solid currentColor;transform:rotate(45deg) translateY(-1px);transition:transform .22s}
+.tl-card[open] .tl-more::before{transform:rotate(225deg) translateY(1px)}
+.tl-card[open] .tl-more{color:var(--brass)}
+.tl-body{padding:0 1.3rem 1.3rem;animation:unfold .25s ease}
+.tl-body ul{margin:0;padding:1rem 0 0;list-style:none;border-top:1px solid var(--line-soft)}
+.tl-body li{position:relative;padding-left:1.1rem;margin-bottom:.7rem;font-size:.89rem;color:var(--fg-dim)}
+.tl-body li::before{content:"";position:absolute;left:0;top:.7em;width:.45rem;height:1px;background:var(--brass)}
+.tl-body li:last-child{margin-bottom:0}
 
-/* ---------- ledger rows ---------- */
-.entries{border-top:1px solid var(--rule-soft)}
-.entry{border-bottom:1px solid var(--rule-soft)}
-.entry > summary{
-  list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr;
-  gap:.1rem .5rem;padding:1.15rem 2rem 1.15rem .75rem;position:relative;
-  transition:background .18s ease,padding-left .18s ease;
-}
-.entry > summary::-webkit-details-marker{display:none}
-@media (min-width:40rem){ .entry > summary{grid-template-columns:9.5rem 1fr} }
-.entry > summary:hover{background:var(--bg-2);padding-left:1.1rem}
-.entry-when{font-size:.84rem;color:var(--fg-dim);font-variant-numeric:tabular-nums;padding-top:.3rem;white-space:nowrap}
-.entry-what{font-weight:500;transition:color .18s ease}
-.entry-where{font-size:.9rem;color:var(--fg-dim);font-style:italic}
-@media (min-width:40rem){ .entry-where{grid-column:2} }
-.entry > summary:hover .entry-what{color:var(--brass)}
-.entry > summary::after{
-  content:"";position:absolute;right:.8rem;top:1.5rem;
-  width:.6rem;height:.6rem;
-  border-right:1px solid var(--fg-dim);border-bottom:1px solid var(--fg-dim);
-  transform:rotate(45deg);transition:transform .2s ease;
-}
-.entry[open] > summary::after{transform:rotate(225deg)}
-.entry-body{padding:0 1rem 1.6rem .75rem;animation:unfold .26s ease}
-@media (min-width:40rem){ .entry-body{padding-left:10.25rem} }
-@media (prefers-reduced-motion: reduce){ .entry-body{animation:none} }
-@keyframes unfold{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-.entry-body ul{margin:0;padding:0;list-style:none}
-.entry-body li{position:relative;padding-left:1.15rem;margin-bottom:.75rem;max-width:var(--measure);font-size:.96rem;color:var(--fg)}
-.entry-body li::before{content:"";position:absolute;left:0;top:.73em;width:.5rem;height:1px;background:var(--oxblood)}
-.entry-body li:last-child{margin-bottom:0}
+.skills{display:grid;gap:1rem}
+@media (min-width:40rem){.skills{grid-template-columns:1fr 1fr}}
+@media (min-width:64rem){.skills{grid-template-columns:repeat(3,1fr)}}
+.skillcard{border:1px solid var(--line-soft);border-radius:12px;padding:1.3rem;background:var(--bg-2);transition:border-color .25s,transform .25s}
+.skillcard:hover{border-color:var(--line);transform:translateY(-3px)}
+.skillcard h3{font-size:.92rem;font-weight:600;margin:0 0 .9rem;display:flex;align-items:center;gap:.5rem}
+.skillcard h3 i{color:var(--teal);font-style:normal;font-size:.78rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-size:.74rem;color:var(--fg-dim);background:var(--bg-3);border:1px solid var(--line-soft);
+  border-radius:5px;padding:.22rem .55rem;transition:color .18s,border-color .18s}
+.tag:hover{color:var(--brass);border-color:var(--brass)}
 
-/* ---------- architecture diagram ---------- */
-.diagram{margin:2rem 0 1.5rem;width:100%;overflow:visible}
-.d-box{fill:none;stroke:var(--rule);stroke-width:1}
+.proj{border:1px solid var(--line-soft);border-radius:14px;background:var(--bg-2);padding:clamp(1.3rem,3vw,2rem)}
+.proj-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;margin-bottom:.9rem}
+.proj h3{font-size:1.25rem;font-weight:600;margin:0}
+.proj-link{font-size:.8rem;color:var(--teal);border-bottom:1px solid transparent}
+.proj-link:hover{border-bottom-color:var(--teal)}
+.proj p{color:var(--fg-dim);max-width:var(--measure);font-size:.94rem}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem}
+.badge{font-size:.72rem;color:var(--fg-faint);border:1px solid var(--line-soft);border-radius:999px;padding:.2rem .6rem}
+
+.diagram{width:100%;margin:1.6rem 0;overflow:visible}
+.d-box{fill:none;stroke:var(--line);stroke-width:1}
 .d-box-hi{fill:none;stroke:var(--brass);stroke-width:1.2}
-.d-fill{fill:var(--bg-2)}
-.d-text{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:7px;fill:var(--fg)}
-.d-text-dim{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:5.4px;fill:var(--fg-dim)}
-.d-link{stroke:var(--rule);stroke-width:1;fill:none}
+.d-box-tl{fill:none;stroke:var(--teal);stroke-width:1.2}
+.d-fill{fill:var(--bg-3)}
+.d-t{font-family:'JetBrains Mono',monospace;font-size:7px;fill:var(--fg)}
+.d-d{font-family:'JetBrains Mono',monospace;font-size:5.4px;fill:var(--fg-faint)}
+.d-link{stroke:var(--line);stroke-width:1;fill:none}
 .d-draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
-.go .d-draw{animation:draw 1.1s ease forwards}
+.go .d-draw{animation:draw 1.2s ease forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 .d-fade{opacity:0}
-.go .d-fade{animation:fadein .55s ease forwards}
-.go .d-fade:nth-of-type(2n){animation-delay:.12s}
+.go .d-fade{animation:fadein .6s ease forwards}
 @keyframes fadein{to{opacity:1}}
-@media (prefers-reduced-motion: reduce){
-  .d-draw{stroke-dashoffset:0;animation:none!important}
-  .d-fade{opacity:1;animation:none!important}
-}
-.diagram-note{font-size:.88rem;color:var(--fg-dim);max-width:var(--measure)}
+@media (prefers-reduced-motion:reduce){.d-draw{stroke-dashoffset:0;animation:none!important}.d-fade{opacity:1;animation:none!important}}
 
-/* ---------- stack ---------- */
-.stack{display:grid;gap:1.6rem}
-@media (min-width:46rem){ .stack{grid-template-columns:1fr 1fr;gap:1.8rem 2.5rem} }
-.stack h3{font-size:.93rem;font-weight:600;margin:0 0 .35rem;color:var(--fg)}
-.stack p{font-size:.93rem;color:var(--fg-dim);margin:0}
+.contact{display:grid;gap:.8rem;max-width:30rem}
+.crow{display:flex;align-items:center;gap:1rem;padding:.9rem 1.1rem;border:1px solid var(--line-soft);
+  border-radius:10px;background:var(--bg-2);transition:border-color .22s,transform .22s}
+.crow:hover{border-color:var(--brass);transform:translateX(4px)}
+.crow .k{font-size:.72rem;color:var(--fg-faint);min-width:4.6rem}
+.crow .v{font-size:.9rem;color:var(--fg);word-break:break-word}
+footer{border-top:1px solid var(--line-soft);padding:2rem 0 3rem;font-size:.8rem;color:var(--fg-faint)}
+footer p{margin:0 0 .4rem}
 
-/* ---------- project ---------- */
-.project h3{font-size:1.15rem;font-weight:500;margin:0 0 .2rem}
-.repo{font-size:.85rem;color:var(--fg-dim);margin:0 0 1.2rem}
-
-/* ---------- contact ---------- */
-.contact-list{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
-.contact-list span{display:inline-block;min-width:5.5rem;color:var(--fg-dim);font-size:.85rem;font-style:italic}
-
-footer{margin-top:5rem;padding-top:1.2rem;border-top:1px solid var(--rule-soft);font-size:.82rem;color:var(--fg-dim)}
-
-/* ---------- section reveal: one shared treatment, not per-card ---------- */
-.block{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
-.block.seen{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){ .block{opacity:1;transform:none;transition:none} }
+.rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.rv.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
 <div id="progress" aria-hidden="true"></div>
 
-<div class="controls">
-  <button class="ctl" id="sound-toggle" type="button" aria-pressed="false" aria-label="Enable interface sound" title="Interface sound">♪</button>
-  <button class="ctl" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Light or dark">◐</button>
-</div>
+<div class="wrap">
 
-<div class="sheet">
+<nav id="nav">
+  <a class="brand mono" href="#top">aditya@cloud<span class="cursor" aria-hidden="true"></span></a>
+  <div class="navlinks">
+    <a href="#capability">Capability</a>
+    <a href="#incidents">Incidents</a>
+    <a href="#record">Record</a>
+    <a href="#stack">Stack</a>
+    <a href="#open">Open source</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="navtools">
+    <button class="ctl mono" id="sound-toggle" type="button" aria-pressed="false" aria-label="Enable interface sound" title="Interface sound">&#9834;</button>
+    <button class="ctl mono" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Light or dark">&#9680;</button>
+  </div>
+</nav>
+
+<div class="shell" id="top">
 
   <header class="hero">
-    <p class="hero-kicker mono">BENGALURU, INDIA</p>
-    <h1 class="name">Aditya <em>Deshpande</em></h1>
-    <p class="role">I build AWS infrastructure that is fast enough for engineers and defensible enough for regulators.</p>
+    <p class="hero-tag mono"><span class="dot" aria-hidden="true"></span> BENGALURU, INDIA</p>
+    <h1>Aditya<br><span class="grad">Deshpande</span></h1>
+    <p class="hero-line">I build AWS platforms that are fast enough for engineers and defensible enough for regulators, then own them when they break.</p>
 
-    <div class="figure-wrap">
-      <div class="figure-row">
-        <span class="figure-now" id="loan-figure" data-target="1500000">15,00,000</span>
-        <svg id="growth" viewBox="0 0 120 54" role="img" aria-label="Loan volume grew from one lakh at cutover to fifteen lakh today.">
-          <line class="spark-base" x1="4" y1="46" x2="116" y2="46"/>
-          <path class="spark-line d-draw" style="--len:150" d="M8 42 C 44 41, 62 34, 78 22 S 104 8, 112 6"/>
-          <circle class="spark-dot d-fade" cx="8" cy="42" r="2"/>
-          <circle class="spark-dot d-fade" cx="112" cy="6" r="2.6"/>
-          <text class="spark-label d-fade" x="4" y="53">2023</text>
-          <text class="spark-label d-fade" x="104" y="53">now</text>
-        </svg>
-      </div>
-      <p class="figure-caption">active loans running on infrastructure I built and migrated onto. At cutover it carried <b>1,00,000</b>, and nothing about the design had to change to get here.</p>
+    <div class="metrics">
+      <div class="metric"><span class="n" data-to="1500000" data-fmt="in">15,00,000</span><span class="l">active loans on infrastructure I built</span></div>
+      <div class="metric"><span class="n" data-to="65">65</span><span class="l">microservices under my ownership</span></div>
+      <div class="metric"><span class="n" data-to="10">10</span><span class="l">AWS accounts governed</span></div>
+      <div class="metric"><span class="n" data-to="0">0</span><span class="l">critical findings at regulatory audit</span></div>
     </div>
 
-    <p class="scroll-hint"><span class="bar"></span> scroll</p>
+    <div class="spark-row">
+      <svg id="growth" viewBox="0 0 120 50" role="img" aria-label="Loan volume grew from one lakh at cutover in 2023 to fifteen lakh today.">
+        <line class="spark-base" x1="4" y1="42" x2="116" y2="42"/>
+        <path class="spark-line d-draw" style="--len:150" d="M8 38 C 44 37, 62 30, 78 19 S 104 7, 112 5"/>
+        <circle class="spark-dot d-fade" cx="8" cy="38" r="2"/>
+        <circle class="spark-dot d-fade" cx="112" cy="5" r="2.6"/>
+        <text class="spark-label d-fade" x="4" y="49">2023</text>
+        <text class="spark-label d-fade" x="103" y="49">now</text>
+      </svg>
+      <p class="spark-note">The platform carried 1,00,000 loans at cutover. Nothing about the design had to change to reach fifteen times that.</p>
+    </div>
+
+    <p class="scroll-hint mono"><i aria-hidden="true"></i> SCROLL</p>
   </header>
 
   <main id="main">
 
-    <section class="block" id="work">
-      <h2><span class="num mono">01</span>THE WORK</h2>
-      <p class="lede">Somebody has to know why the database is on fire at 2am. At a regulated lender, that same person has to explain it to an auditor three weeks later, in writing. <b>That gap is where I work.</b></p>
-      <p>Six years in, currently the effective sole owner of cloud platform and security across 10 AWS accounts and 65 microservices at an AAA-rated NBFC.</p>
-      <p>Most of what I build exists to remove work rather than add it. Access that expires on its own. Partner onboarding that provisions itself from an approved request. A merge gate that stops untested code entering the codebase faster than anyone can review it.</p>
+    <section class="band rv" id="capability">
+      <p class="eyebrow mono">01 / CAPABILITY</p>
+      <h2>Three jobs, one person</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">On a small platform team inside a regulated lender, platform, cloud and security are not three roles. They are the same role on three different days.</p>
+
+      <div class="pillars">
+        <article class="pillar">
+          <span class="ico mono" aria-hidden="true">[ ]</span>
+          <h3>Platform</h3>
+          <p>Infrastructure as code first. Everything reproducible, every environment a parameter away from production.</p>
+          <ul>
+            <li><span>Microservices</span><b>65</b></li>
+            <li><span>Provisioning time cut</span><b>70%</b></li>
+            <li><span>Off-peak compute saved</span><b>30%</b></li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <span class="ico mono" aria-hidden="true">{ }</span>
+          <h3>Cloud</h3>
+          <p>Production Kubernetes, Aurora at DBA level, and the multi-account governance holding ten accounts together.</p>
+          <ul>
+            <li><span>EKS upgrades</span><b>1.29 &rarr; 1.35</b></li>
+            <li><span>Production disruption</span><b>none</b></li>
+            <li><span>PostgreSQL instances</span><b>15+</b></li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <span class="ico mono" aria-hidden="true">&lt;/&gt;</span>
+          <h3>Security</h3>
+          <p>Controls that live in the pipeline rather than in a review meeting, and the evidence an auditor actually accepts.</p>
+          <ul>
+            <li><span>IAM policies rebuilt</span><b>80+</b></li>
+            <li><span>Misconfigurations closed</span><b>10K+</b></li>
+            <li><span>Frameworks delivered</span><b>4</b></li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section class="block" id="record">
-      <h2><span class="num mono">02</span>RECORD</h2>
-      <div class="entries">
+    <section class="band rv" id="incidents">
+      <p class="eyebrow mono">02 / FORENSICS</p>
+      <h2>What it looked like, what it actually was</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">Anyone can list tools. The part of this job that is hard to fake is working out what is really wrong while a lending platform is down. Four real ones. Open any of them.</p>
 
-        <details class="entry">
+      <div class="cases">
+
+        <details class="case">
           <summary>
-            <span class="entry-when mono">Apr 2025 — now</span>
-            <span class="entry-what">Software Engineer 2, DevSecOps</span>
-            <span class="entry-where">Credit Saison India</span>
+            <span class="case-sev mono">P0 &middot; CORE LENDING CLUSTER</span>
+            <h3>Aurora CPU pinned at 100 percent</h3>
+            <p class="sym">Database saturated, queries queueing, and no obvious expensive statement in the slow log.</p>
           </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Effective sole owner of cloud infrastructure and security across 10 AWS accounts and 65 microservices, covering platform delivery, security posture, incident response and regulatory audit evidence.</li>
-              <li>Rebuilt IAM to least privilege across 80+ managed policies with every owning team, including a deny-based allowlist for vendor access and a per-table data lake policy engineered against the 6144 character managed policy ceiling.</li>
-              <li>Built a pre-merge diff-coverage gate that blocks any pull request whose new lines lack test coverage, so AI-assisted development cannot quietly fill the codebase with untested code.</li>
-              <li>Replaced manual access and onboarding with self-service automation: time-boxed Athena access that expires on its own, database provisioning with credentials delivered through Secrets Manager, and SFTP partner onboarding generating keys, storage, secrets and roles from an approved request.</li>
-              <li>Incident owner for the lending platform. Point-in-time restore of a production Aurora cluster with zero data loss, a P0 CPU saturation event traced to a connection pool leak in a payment batch job, and a JVM deadlock isolated through heap and thread dump analysis. I write the RCAs and the preventive controls that follow.</li>
-              <li>In-place EKS upgrades from 1.29 through 1.35 with zero production disruption, and CIS hardening of Ubuntu 24.04 across all seven sections via Ansible and Image Builder.</li>
-              <li>Technical integration with external vendors covering video KYC and CERSAI regulatory reporting, from secure cross-account data exchange design through production support.</li>
+          <div class="case-body">
+            <ul class="trace">
+              <li>Performance Insights showed load climbing with <b>no single expensive statement</b> behind it.</li>
+              <li>Connection forensics showed sessions accumulating rather than cycling, far past what the workload justified.</li>
+              <li>Traced the growth to a <b>HikariCP connection pool leak</b> in a payment batch job that never returned borrowed connections.</li>
             </ul>
+            <p class="verdict"><span class="mono">OUTCOME</span>Cross-team remediation on the application side, a formal RCA, and preventive controls so a pool could not silently exhaust the cluster again.</p>
           </div>
         </details>
 
-        <details class="entry">
+        <details class="case">
           <summary>
-            <span class="entry-when mono">Oct 2024 — Apr 2025</span>
-            <span class="entry-what">Software Engineer 1, DevSecOps</span>
-            <span class="entry-where">Credit Saison India</span>
+            <span class="case-sev mono">RECOVERY &middot; ZERO DATA LOSS</span>
+            <h3>An Aurora cluster that would not open</h3>
+            <p class="sym">A production cluster became inaccessible after a dependency it relied on was decommissioned.</p>
           </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Moved from building the platform to securing it: misconfiguration remediation at scale, Kubernetes security, vulnerability management, IaC scanning and cloud detection and response, aligned to RBI MD-ITF, RBI UCB and NIST 800-53 Rev 5.</li>
-              <li>Closed VAPT findings and critical cloud posture items with an external auditor, producing control evidence for SOC 2 and ISO 27001. Passed regulatory audit with zero critical findings.</li>
-              <li>Tagged 4000+ AWS resources through a Python and CloudFormation framework, reaching full coverage in lower environments and 90 percent in production for cost attribution.</li>
-              <li>Consolidated five deprecated AWS accounts into the central security account, cutting both spend and audit surface.</li>
+          <div class="case-body">
+            <ul class="trace">
+              <li>Established that the cluster could not be recovered in place, so the question became <b>how far back to go</b>.</li>
+              <li>Ran point-in-time restore against a timestamp chosen to sit before the change and after the last consistent write.</li>
+              <li>Led failover and cluster restore with engineering leadership, verifying integrity before any traffic returned.</li>
             </ul>
+            <p class="verdict"><span class="mono">OUTCOME</span>Recovered with zero data loss. The DR runbook covering PITR, Aurora restore and cross-account restoration came out of it.</p>
           </div>
         </details>
 
-        <details class="entry">
+        <details class="case">
           <summary>
-            <span class="entry-when mono">May 2023 — Oct 2024</span>
-            <span class="entry-what">System Engineer</span>
-            <span class="entry-where">Credit Saison India</span>
+            <span class="case-sev mono">LATENCY &middot; PRODUCTION API</span>
+            <h3>Threads frozen while the CPU sat idle</h3>
+            <p class="sym">Response times collapsed while the host showed almost no load, and nothing useful in the application logs.</p>
           </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Built the AWS platform for the new Loan Management System from scratch in CloudFormation and owned the migration off the legacy system under RBI guidelines.</li>
-              <li>Re-architected it by decoupling UI and API compute layers, removing cross-service deployment downtime, and cut manual provisioning time 70 percent with parameterised IaC.</li>
-              <li>Reduced off-peak EC2 consumption 30 percent through autoscaling plus Lambda-driven scheduled vertical scaling for end-of-day batch workloads.</li>
-              <li>Built the Transfer Family SFTP platform with a Lambda identity provider and per-user roles, and a log retrieval service that removed production access for external teams entirely.</li>
-              <li>DBA for 15+ PostgreSQL databases, and led a 20+ member round-the-clock monitoring team with the runbooks to go with it.</li>
+          <div class="case-body">
+            <ul class="trace">
+              <li>Idle CPU with stalled requests pointed away from capacity and towards <b>blocking</b>.</li>
+              <li>Took heap and thread dumps under load and analysed them rather than guessing from metrics.</li>
+              <li>Isolated a <b>JVM deadlock</b>, with threads contending on a shared monitor held inside an observability agent's instrumentation.</li>
             </ul>
+            <p class="verdict"><span class="mono">OUTCOME</span>Root cause sat in a third-party agent, not in our code. Found because the dumps were taken while it was happening rather than after a restart.</p>
           </div>
         </details>
 
-        <details class="entry">
+        <details class="case">
           <summary>
-            <span class="entry-when mono">Apr 2021 — May 2023</span>
-            <span class="entry-what">Technical Support Senior Associate</span>
-            <span class="entry-where">Amazon</span>
+            <span class="case-sev mono">FLEET &middot; DISK EXHAUSTION</span>
+            <h3>A host filling up for no reason</h3>
+            <p class="sym">Root volume at 100 percent on an application host. Clearing it bought a few days, then it came back.</p>
           </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Supported the Amazon Appstore developer ecosystem across the US, UK and India on more than ten device platforms.</li>
-              <li>Traced escalations through EC2, CloudWatch, IAM and S3 to isolate root cause rather than closing on symptoms, and drove recurring findings back into platform improvements.</li>
-              <li>Built shell tooling for data delivery and status reporting, and maintained the MySQL databases behind developer submissions and deployment tracking.</li>
+          <div class="case-body">
+            <ul class="trace">
+              <li>Most of the volume sat in temporary directories left behind by a <b>security scanning agent</b> that never cleaned up after itself.</li>
+              <li>Rather than reclaim the space and move on, checked sibling hosts and found the same pattern on each.</li>
+              <li>Reclassified it from a one-host incident to a <b>fleet-wide agent defect</b>, alongside unrotated logs and unbounded retention.</li>
             </ul>
-          </div>
-        </details>
-
-        <details class="entry">
-          <summary>
-            <span class="entry-when mono">May 2020 — Apr 2021</span>
-            <span class="entry-what">Technical Support Engineer</span>
-            <span class="entry-where">Micro Focus, now OpenText</span>
-          </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Hybrid cloud observability for enterprise customers using OBM, SiteScope and SMAX against AWS, on-premise Linux and Windows estates.</li>
-              <li>Automated alerting and log collection through shell scripting, and wrote the onboarding and escalation procedures the team had previously carried in people's heads.</li>
-            </ul>
+            <p class="verdict"><span class="mono">OUTCOME</span>The difference between an hour of disk cleanup and a problem that stops recurring is asking whether host two has it too.</p>
           </div>
         </details>
 
       </div>
     </section>
 
-    <section class="block" id="built">
-      <h2><span class="num mono">03</span>WHAT I BUILT IN THE OPEN</h2>
-      <div class="project">
-        <h3>service-launcher</h3>
-        <p class="repo mono"><a href="https://github.com/addsh/service-launcher" rel="noopener">github.com/addsh/service-launcher</a></p>
+    <section class="band rv" id="record">
+      <p class="eyebrow mono">03 / RECORD</p>
+      <h2>Support desk to platform owner, six years</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">Built the platform, then secured it, then took ownership of it. Click any role to expand.</p>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <details class="tl-card">
+            <summary>
+              <span class="tl-when mono">APR 2025 &mdash; NOW</span>
+              <h3 class="tl-role">Software Engineer 2, DevSecOps</h3>
+              <p class="tl-org">Credit Saison India</p>
+              <p class="tl-more">Click to expand</p>
+            </summary>
+            <div class="tl-body">
+              <ul>
+                <li>Effective sole owner of cloud infrastructure and security across 10 AWS accounts and 65 microservices, covering platform delivery, security posture, incident response and regulatory audit evidence.</li>
+                <li>Rebuilt IAM to least privilege across 80+ managed policies with every owning team, including a deny-based allowlist for vendor access and a per-table data lake policy engineered against the 6144 character policy ceiling.</li>
+                <li>Built a pre-merge diff-coverage gate that blocks any pull request whose new lines lack test coverage, so AI-assisted development cannot quietly fill the codebase with untested code.</li>
+                <li>Replaced manual access and onboarding with self-service automation: time-boxed Athena access that expires on its own, database provisioning through Secrets Manager, and SFTP partner onboarding generating keys, storage, secrets and roles from an approved request.</li>
+                <li>In-place EKS upgrades from 1.29 through 1.35 with zero production disruption, and CIS hardening of Ubuntu 24.04 across all seven sections via Ansible and Image Builder.</li>
+                <li>Technical integration with external vendors covering video KYC and CERSAI regulatory reporting.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="tl-item">
+          <details class="tl-card">
+            <summary>
+              <span class="tl-when mono">OCT 2024 &mdash; APR 2025</span>
+              <h3 class="tl-role">Software Engineer 1, DevSecOps</h3>
+              <p class="tl-org">Credit Saison India</p>
+              <p class="tl-more">Click to expand</p>
+            </summary>
+            <div class="tl-body">
+              <ul>
+                <li>Moved from building the platform to securing it: misconfiguration remediation at scale, Kubernetes security, vulnerability management, IaC scanning and cloud detection and response, aligned to RBI MD-ITF, RBI UCB and NIST 800-53 Rev 5.</li>
+                <li>Closed VAPT findings and critical posture items with an external auditor, producing control evidence for SOC 2 and ISO 27001. Passed regulatory audit with zero critical findings.</li>
+                <li>Tagged 4000+ AWS resources through a Python and CloudFormation framework for cost attribution.</li>
+                <li>Consolidated five deprecated AWS accounts into the central security account, cutting spend and audit surface together.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="tl-item">
+          <details class="tl-card">
+            <summary>
+              <span class="tl-when mono">MAY 2023 &mdash; OCT 2024</span>
+              <h3 class="tl-role">System Engineer</h3>
+              <p class="tl-org">Credit Saison India</p>
+              <p class="tl-more">Click to expand</p>
+            </summary>
+            <div class="tl-body">
+              <ul>
+                <li>Built the AWS platform for the new Loan Management System from scratch in CloudFormation and owned the migration off the legacy system under RBI guidelines.</li>
+                <li>Decoupled UI and API compute layers, removing cross-service deployment downtime, and cut manual provisioning time 70 percent with parameterised IaC.</li>
+                <li>Reduced off-peak EC2 consumption 30 percent through autoscaling plus Lambda-driven scheduled vertical scaling for end-of-day batch workloads.</li>
+                <li>Built the Transfer Family SFTP platform with a Lambda identity provider, and a log retrieval service that removed production access for external teams entirely.</li>
+                <li>DBA for 15+ PostgreSQL databases, and led a 20+ member round-the-clock monitoring team with the runbooks to go with it.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="tl-item">
+          <details class="tl-card">
+            <summary>
+              <span class="tl-when mono">APR 2021 &mdash; MAY 2023</span>
+              <h3 class="tl-role">Technical Support Senior Associate</h3>
+              <p class="tl-org">Amazon</p>
+              <p class="tl-more">Click to expand</p>
+            </summary>
+            <div class="tl-body">
+              <ul>
+                <li>Supported the Amazon Appstore developer ecosystem across the US, UK and India on more than ten device platforms.</li>
+                <li>Traced escalations through EC2, CloudWatch, IAM and S3 to isolate root cause rather than closing on symptoms, and drove recurring findings back into platform improvements.</li>
+                <li>Built shell tooling for data delivery and reporting, and maintained the MySQL databases behind developer submissions.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="tl-item">
+          <details class="tl-card">
+            <summary>
+              <span class="tl-when mono">MAY 2020 &mdash; APR 2021</span>
+              <h3 class="tl-role">Technical Support Engineer</h3>
+              <p class="tl-org">Micro Focus, now OpenText</p>
+              <p class="tl-more">Click to expand</p>
+            </summary>
+            <div class="tl-body">
+              <ul>
+                <li>Hybrid cloud observability for enterprise customers using OBM, SiteScope and SMAX against AWS, on-premise Linux and Windows estates.</li>
+                <li>Automated alerting and log collection through shell scripting, and wrote the onboarding and escalation procedures the team had previously carried in people's heads.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="band rv" id="stack">
+      <p class="eyebrow mono">04 / STACK</p>
+      <h2>Tools I actually run in production</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">Not a list of everything I have read about. These are the things I have shipped, broken and fixed.</p>
+
+      <div class="skills">
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">01</i> Cloud</h3>
+          <div class="tags"><span class="tag mono">AWS</span><span class="tag mono">EC2</span><span class="tag mono">Lambda</span><span class="tag mono">S3</span><span class="tag mono">VPC</span><span class="tag mono">API Gateway</span><span class="tag mono">EventBridge</span><span class="tag mono">Systems Manager</span><span class="tag mono">Transfer Family</span><span class="tag mono">CloudHSM</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">02</i> Orchestration</h3>
+          <div class="tags"><span class="tag mono">Kubernetes</span><span class="tag mono">Amazon EKS</span><span class="tag mono">ECS Fargate</span><span class="tag mono">Docker</span><span class="tag mono">Helm</span><span class="tag mono">PDBs</span><span class="tag mono">HPA</span><span class="tag mono">Cluster Autoscaler</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">03</i> Infrastructure as code</h3>
+          <div class="tags"><span class="tag mono">CloudFormation</span><span class="tag mono">Terraform</span><span class="tag mono">Ansible</span><span class="tag mono">EC2 Image Builder</span><span class="tag mono">Nested stacks</span><span class="tag mono">GitOps</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">04</i> CI/CD and governance</h3>
+          <div class="tags"><span class="tag mono">GitHub Actions</span><span class="tag mono">CodePipeline</span><span class="tag mono">CodeBuild</span><span class="tag mono">SAST</span><span class="tag mono">Diff coverage gates</span><span class="tag mono">CODEOWNERS</span><span class="tag mono">Branch protection</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">05</i> Security and compliance</h3>
+          <div class="tags"><span class="tag mono">IAM least privilege</span><span class="tag mono">CSPM</span><span class="tag mono">EDR/XDR</span><span class="tag mono">CIS Benchmarks</span><span class="tag mono">RBI MD-ITF</span><span class="tag mono">RBI UCB</span><span class="tag mono">ISO 27001</span><span class="tag mono">SOC 2</span><span class="tag mono">NIST 800-53</span><span class="tag mono">VAPT</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">06</i> Data</h3>
+          <div class="tags"><span class="tag mono">PostgreSQL</span><span class="tag mono">Aurora</span><span class="tag mono">RDS</span><span class="tag mono">MySQL</span><span class="tag mono">PITR</span><span class="tag mono">Athena</span><span class="tag mono">Glue</span><span class="tag mono">Secrets Manager</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">07</i> Observability</h3>
+          <div class="tags"><span class="tag mono">Datadog APM</span><span class="tag mono">Datadog DBM</span><span class="tag mono">CloudWatch</span><span class="tag mono">Prometheus</span><span class="tag mono">Grafana</span><span class="tag mono">Heap &amp; thread dumps</span><span class="tag mono">RCA authorship</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">08</i> Automation</h3>
+          <div class="tags"><span class="tag mono">Python</span><span class="tag mono">Node.js</span><span class="tag mono">Bash</span><span class="tag mono">Jira-driven workflows</span><span class="tag mono">AI-assisted ops</span><span class="tag mono">Scoped agent access</span></div>
+        </div>
+        <div class="skillcard">
+          <h3><i class="mono" aria-hidden="true">09</i> FinOps</h3>
+          <div class="tags"><span class="tag mono">Cost attribution tagging</span><span class="tag mono">Right-sizing</span><span class="tag mono">Scheduled autoscaling</span><span class="tag mono">Lifecycle policies</span><span class="tag mono">Account consolidation</span><span class="tag mono">Cost-drift detection</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band rv" id="open">
+      <p class="eyebrow mono">05 / OPEN SOURCE</p>
+      <h2>Built in public</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">The same thing I do at work, with the company specifics stripped out and the reasoning written down.</p>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>service-launcher</h3>
+          <a class="proj-link mono" href="https://github.com/addsh/service-launcher" rel="noopener">github.com/addsh/service-launcher &rarr;</a>
+        </div>
         <p>One YAML file describes your services. A generator emits a parent stack holding one nested stack each, which clears CloudFormation's 500-resource ceiling and isolates a failure to the service that caused it. Every service shares the same two load balancers through host-based routing, so the marginal cost of one more service is only its compute.</p>
 
-        <svg class="diagram" id="arch" viewBox="0 0 320 168" role="img" aria-label="Architecture diagram: services.yaml feeds a generator, which emits a parent stack containing one nested stack per service, all sharing two load balancers over one VPC.">
-          <!-- input -->
-          <rect class="d-fill d-fade" x="6" y="12" width="74" height="26" rx="2"/>
-          <rect class="d-box-hi d-fade" x="6" y="12" width="74" height="26" rx="2"/>
-          <text class="d-text d-fade" x="16" y="23">services.yaml</text>
-          <text class="d-text-dim d-fade" x="16" y="33">your 3 or your 50</text>
+        <svg class="diagram" id="arch" viewBox="0 0 320 170" role="img" aria-label="services.yaml feeds a generator, which emits a parent stack containing one nested stack per service, all sharing two load balancers over a single VPC.">
+          <rect class="d-fill d-fade" x="6" y="12" width="76" height="27" rx="3"/>
+          <rect class="d-box-tl d-fade" x="6" y="12" width="76" height="27" rx="3"/>
+          <text class="d-t d-fade" x="16" y="24">services.yaml</text>
+          <text class="d-d d-fade" x="16" y="33">your 3 or your 50</text>
 
-          <path class="d-link d-draw" style="--len:40" d="M83 25 H 112"/>
-          <path class="d-link d-fade" d="M106 21 L112 25 L106 29"/>
+          <path class="d-link d-draw" style="--len:32" d="M85 26 H 112"/>
+          <path class="d-link d-fade" d="M106 22 L112 26 L106 30"/>
 
-          <!-- generator -->
-          <rect class="d-fill d-fade" x="114" y="12" width="66" height="26" rx="2"/>
-          <rect class="d-box d-fade" x="114" y="12" width="66" height="26" rx="2"/>
-          <text class="d-text d-fade" x="124" y="23">generate.py</text>
-          <text class="d-text-dim d-fade" x="124" y="33">+ terraform</text>
+          <rect class="d-fill d-fade" x="114" y="12" width="68" height="27" rx="3"/>
+          <rect class="d-box d-fade" x="114" y="12" width="68" height="27" rx="3"/>
+          <text class="d-t d-fade" x="124" y="24">generate.py</text>
+          <text class="d-d d-fade" x="124" y="33">+ terraform modules</text>
 
-          <path class="d-link d-draw" style="--len:40" d="M183 25 H 212"/>
-          <path class="d-link d-fade" d="M206 21 L212 25 L206 29"/>
+          <path class="d-link d-draw" style="--len:32" d="M185 26 H 212"/>
+          <path class="d-link d-fade" d="M206 22 L212 26 L206 30"/>
 
-          <!-- parent stack -->
-          <rect class="d-fill d-fade" x="214" y="12" width="98" height="26" rx="2"/>
-          <rect class="d-box d-fade" x="214" y="12" width="98" height="26" rx="2"/>
-          <text class="d-text d-fade" x="224" y="23">parent stack</text>
-          <text class="d-text-dim d-fade" x="224" y="33">1 nested stack / service</text>
+          <rect class="d-fill d-fade" x="214" y="12" width="100" height="27" rx="3"/>
+          <rect class="d-box d-fade" x="214" y="12" width="100" height="27" rx="3"/>
+          <text class="d-t d-fade" x="224" y="24">parent stack</text>
+          <text class="d-d d-fade" x="224" y="33">1 nested stack / service</text>
 
-          <!-- fan out -->
-          <path class="d-link d-draw" style="--len:14" d="M263 40 V 51"/>
-          <path class="d-link d-draw" style="--len:216" d="M54 51 H 266"/>
-          <path class="d-link d-draw" style="--len:16" d="M54 51 V 64"/>
-          <path class="d-link d-draw" style="--len:16" d="M160 51 V 64"/>
-          <path class="d-link d-draw" style="--len:16" d="M266 51 V 64"/>
+          <path class="d-link d-draw" style="--len:14" d="M264 41 V 52"/>
+          <path class="d-link d-draw" style="--len:214" d="M54 52 H 266"/>
+          <path class="d-link d-draw" style="--len:14" d="M54 52 V 65"/>
+          <path class="d-link d-draw" style="--len:14" d="M160 52 V 65"/>
+          <path class="d-link d-draw" style="--len:14" d="M266 52 V 65"/>
 
-          <!-- services -->
-          <rect class="d-fill d-fade" x="16" y="64" width="76" height="24" rx="2"/>
-          <rect class="d-box d-fade" x="16" y="64" width="76" height="24" rx="2"/>
-          <text class="d-text d-fade" x="25" y="74">orders-api</text>
-          <text class="d-text-dim d-fade" x="25" y="83">asg · tg · iam · dns</text>
+          <rect class="d-fill d-fade" x="16" y="65" width="76" height="25" rx="3"/>
+          <rect class="d-box d-fade" x="16" y="65" width="76" height="25" rx="3"/>
+          <text class="d-t d-fade" x="25" y="76">orders-api</text>
+          <text class="d-d d-fade" x="25" y="85">asg · tg · iam · dns</text>
 
-          <rect class="d-fill d-fade" x="122" y="64" width="76" height="24" rx="2"/>
-          <rect class="d-box d-fade" x="122" y="64" width="76" height="24" rx="2"/>
-          <text class="d-text d-fade" x="131" y="74">payments-api</text>
-          <text class="d-text-dim d-fade" x="131" y="83">asg · tg · iam · dns</text>
+          <rect class="d-fill d-fade" x="122" y="65" width="76" height="25" rx="3"/>
+          <rect class="d-box d-fade" x="122" y="65" width="76" height="25" rx="3"/>
+          <text class="d-t d-fade" x="131" y="76">payments-api</text>
+          <text class="d-d d-fade" x="131" y="85">asg · tg · iam · dns</text>
 
-          <rect class="d-fill d-fade" x="228" y="64" width="76" height="24" rx="2"/>
-          <rect class="d-box d-fade" x="228" y="64" width="76" height="24" rx="2"/>
-          <text class="d-text d-fade" x="237" y="74">recon-worker</text>
-          <text class="d-text-dim d-fade" x="237" y="83">internal only</text>
+          <rect class="d-fill d-fade" x="228" y="65" width="76" height="25" rx="3"/>
+          <rect class="d-box d-fade" x="228" y="65" width="76" height="25" rx="3"/>
+          <text class="d-t d-fade" x="237" y="76">recon-worker</text>
+          <text class="d-d d-fade" x="237" y="85">internal only</text>
 
-          <!-- down to shared -->
-          <path class="d-link d-draw" style="--len:14" d="M54 88 V 101"/>
-          <path class="d-link d-draw" style="--len:14" d="M160 88 V 101"/>
-          <path class="d-link d-draw" style="--len:14" d="M266 88 V 101"/>
-          <path class="d-link d-draw" style="--len:216" d="M54 101 H 266"/>
-          <path class="d-link d-draw" style="--len:14" d="M160 101 V 112"/>
+          <path class="d-link d-draw" style="--len:14" d="M54 90 V 102"/>
+          <path class="d-link d-draw" style="--len:14" d="M160 90 V 102"/>
+          <path class="d-link d-draw" style="--len:14" d="M266 90 V 102"/>
+          <path class="d-link d-draw" style="--len:214" d="M54 102 H 266"/>
+          <path class="d-link d-draw" style="--len:14" d="M160 102 V 114"/>
 
-          <!-- shared layer -->
-          <rect class="d-fill d-fade" x="60" y="112" width="200" height="24" rx="2"/>
-          <rect class="d-box-hi d-fade" x="60" y="112" width="200" height="24" rx="2"/>
-          <text class="d-text d-fade" x="72" y="122">2 shared load balancers</text>
-          <text class="d-text-dim d-fade" x="72" y="131">public + internal · host-based routing</text>
+          <rect class="d-fill d-fade" x="60" y="114" width="200" height="25" rx="3"/>
+          <rect class="d-box-hi d-fade" x="60" y="114" width="200" height="25" rx="3"/>
+          <text class="d-t d-fade" x="72" y="125">2 shared load balancers</text>
+          <text class="d-d d-fade" x="72" y="134">public + internal · host-based routing</text>
 
-          <path class="d-link d-draw" style="--len:14" d="M160 138 V 146"/>
+          <path class="d-link d-draw" style="--len:12" d="M160 139 V 148"/>
 
-          <rect class="d-fill d-fade" x="60" y="146" width="200" height="18" rx="2"/>
-          <rect class="d-box d-fade" x="60" y="146" width="200" height="18" rx="2"/>
-          <text class="d-text-dim d-fade" x="72" y="158">one vpc · endpoints over nat · encryption throughout</text>
+          <rect class="d-fill d-fade" x="60" y="148" width="200" height="18" rx="3"/>
+          <rect class="d-box d-fade" x="60" y="148" width="200" height="18" rx="3"/>
+          <text class="d-d d-fade" x="72" y="160">one vpc · endpoints over nat · encryption throughout</text>
         </svg>
 
-        <p class="diagram-note">The same architecture is implemented twice, in CloudFormation and in Terraform, with a written comparison of where each tool made the design easier or harder. 28 tests, both paths checked on every pull request.</p>
-      </div>
-    </section>
-
-    <section class="block" id="stack">
-      <h2><span class="num mono">04</span>STACK</h2>
-      <div class="stack">
-        <div>
-          <h3>Cloud and infrastructure</h3>
-          <p>AWS across EC2, EKS, ECS, Aurora and RDS, Lambda, CloudFormation, IAM, VPC, Transfer Family, API Gateway, Athena and Glue. Multi-account governance, Linux hardening.</p>
-        </div>
-        <div>
-          <h3>Infrastructure as code</h3>
-          <p>CloudFormation first, Terraform, Ansible, EC2 Image Builder. Python, Node.js and Bash. CI/CD pipeline design, blue-green and rolling deployments.</p>
-        </div>
-        <div>
-          <h3>Security and compliance</h3>
-          <p>IAM least privilege, SAST and pipeline gates, CSPM, CIS benchmarks, secret rotation. RBI MD-ITF, RBI UCB, ISO 27001, SOC 2, NIST 800-53.</p>
-        </div>
-        <div>
-          <h3>Reliability and data</h3>
-          <p>Datadog and CloudWatch, incident command and RCA authorship, point-in-time restore and disaster recovery. PostgreSQL at DBA level across 15+ instances.</p>
+        <p>The same architecture is implemented twice, once in CloudFormation and once in Terraform, with a written comparison of where each tool made the design easier or harder. Both paths are checked on every pull request.</p>
+        <div class="badges">
+          <span class="badge mono">CloudFormation</span>
+          <span class="badge mono">Terraform</span>
+          <span class="badge mono">28 tests</span>
+          <span class="badge mono">cfn-lint on every PR</span>
+          <span class="badge mono">MIT</span>
         </div>
       </div>
     </section>
 
-    <section class="block" id="contact">
-      <h2><span class="num mono">05</span>CONTACT</h2>
-      <p>Open to conversations about senior platform, SRE and DevSecOps work.</p>
-      <ul class="contact-list">
-        <li><span>Email</span><a href="mailto:aditya.deshpande0302@gmail.com">aditya.deshpande0302@gmail.com</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/aditya-deshpande-devsecops" rel="noopener">aditya-deshpande-devsecops</a></li>
-        <li><span>GitHub</span><a href="https://github.com/addsh" rel="noopener">github.com/addsh</a></li>
-      </ul>
+    <section class="band rv" id="contact">
+      <p class="eyebrow mono">06 / CONTACT</p>
+      <h2>Open to senior platform, SRE and DevSecOps work</h2>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="sub">Bengaluru, or remote. If you are running infrastructure where a mistake is a regulatory event, we will probably get along.</p>
+
+      <div class="contact">
+        <a class="crow" href="mailto:aditya.deshpande0302@gmail.com"><span class="k mono">EMAIL</span><span class="v">aditya.deshpande0302@gmail.com</span></a>
+        <a class="crow" href="https://www.linkedin.com/in/aditya-deshpande-devsecops" rel="noopener"><span class="k mono">LINKEDIN</span><span class="v">aditya-deshpande-devsecops</span></a>
+        <a class="crow" href="https://github.com/addsh" rel="noopener"><span class="k mono">GITHUB</span><span class="v">github.com/addsh</span></a>
+      </div>
     </section>
 
   </main>
 
   <footer>
     <p>M.Tech Computer Science, Vishwakarma Institute of Technology, Pune. B.E Information Technology, PVG's COET, Pune.</p>
+    <p>One static page. No framework, no tracking, no cookies.</p>
   </footer>
 
+</div>
 </div>
 
 <script>
 (function(){
-  "use strict";
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+"use strict";
+var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var root=document.documentElement;
 
-  /* ---- theme ---- */
-  var root = document.documentElement;
-  var tBtn = document.getElementById('theme-toggle');
-  try{
-    var saved = localStorage.getItem('theme');
-    if(saved) root.setAttribute('data-theme', saved);
-  }catch(e){}
-  tBtn.addEventListener('click', function(){
-    var cur = root.getAttribute('data-theme');
-    if(!cur){
-      var sysLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      cur = sysLight ? 'light' : 'dark';
-    }
-    var next = cur === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try{ localStorage.setItem('theme', next); }catch(e){}
-    tick(520);
-  });
+function isLight(){
+  var t=root.getAttribute('data-theme');
+  if(t) return t==='light';
+  return window.matchMedia('(prefers-color-scheme: light)').matches;
+}
 
-  /* ---- sound, off by default ---- */
-  var soundOn = false, actx = null;
-  var sBtn = document.getElementById('sound-toggle');
-  sBtn.addEventListener('click', function(){
-    soundOn = !soundOn;
-    sBtn.setAttribute('aria-pressed', String(soundOn));
-    sBtn.setAttribute('aria-label', soundOn ? 'Disable interface sound' : 'Enable interface sound');
-    if(soundOn){
-      try{
-        actx = actx || new (window.AudioContext || window.webkitAudioContext)();
-        if(actx.state === 'suspended') actx.resume();
-        tick(660);
-      }catch(e){ soundOn = false; sBtn.setAttribute('aria-pressed','false'); }
-    }
-  });
-  function tick(freq){
-    if(!soundOn || !actx) return;
+/* theme */
+var tBtn=document.getElementById('theme-toggle');
+try{var sv=localStorage.getItem('theme'); if(sv) root.setAttribute('data-theme',sv);}catch(e){}
+tBtn.addEventListener('click',function(){
+  var nx = isLight() ? 'dark' : 'light';
+  root.setAttribute('data-theme',nx);
+  try{localStorage.setItem('theme',nx);}catch(e){}
+  starColor(); tick(520);
+});
+
+/* sound */
+var soundOn=false, actx=null, sBtn=document.getElementById('sound-toggle');
+sBtn.addEventListener('click',function(){
+  soundOn=!soundOn;
+  sBtn.setAttribute('aria-pressed',String(soundOn));
+  sBtn.setAttribute('aria-label', soundOn?'Disable interface sound':'Enable interface sound');
+  if(soundOn){
     try{
-      var o = actx.createOscillator(), g = actx.createGain();
-      o.type = 'sine';
-      o.frequency.value = freq || 880;
-      g.gain.setValueAtTime(0.0001, actx.currentTime);
-      g.gain.exponentialRampToValueAtTime(0.035, actx.currentTime + 0.008);
-      g.gain.exponentialRampToValueAtTime(0.0001, actx.currentTime + 0.09);
-      o.connect(g); g.connect(actx.destination);
-      o.start(); o.stop(actx.currentTime + 0.1);
-    }catch(e){}
+      actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+      if(actx.state==='suspended') actx.resume();
+      tick(680);
+    }catch(e){soundOn=false;sBtn.setAttribute('aria-pressed','false');}
   }
-  var hoverables = document.querySelectorAll('.entry > summary, a, .ctl');
-  Array.prototype.forEach.call(hoverables, function(el){
-    el.addEventListener('mouseenter', function(){ tick(740); });
+});
+function tick(f){
+  if(!soundOn||!actx) return;
+  try{
+    var o=actx.createOscillator(), g=actx.createGain();
+    o.type='sine'; o.frequency.value=f||880;
+    g.gain.setValueAtTime(0.0001,actx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.03,actx.currentTime+0.008);
+    g.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+0.085);
+    o.connect(g);g.connect(actx.destination);
+    o.start();o.stop(actx.currentTime+0.095);
+  }catch(e){}
+}
+var lastTick=0;
+document.addEventListener('mouseover',function(e){
+  if(!e.target.closest) return;
+  var t=e.target.closest('summary, a, .ctl, .tag, .pillar, .skillcard');
+  if(!t) return;
+  var now=Date.now(); if(now-lastTick<70) return; lastTick=now;
+  tick(760);
+});
+document.addEventListener('click',function(e){
+  if(e.target.closest && e.target.closest('summary')) tick(430);
+});
+
+/* constellation */
+var cv=document.getElementById('stars'), cx2=cv.getContext('2d');
+var pts=[], W=0,H=0, dotRGB='79,209,197', running=true;
+function starColor(){ dotRGB = isLight() ? '15,122,112' : '79,209,197'; }
+function sizeCanvas(){
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  W=cv.clientWidth; H=cv.clientHeight;
+  cv.width=Math.floor(W*DPR); cv.height=Math.floor(H*DPR);
+  cx2.setTransform(DPR,0,0,DPR,0,0);
+  var count=Math.min(70,Math.max(22,Math.round(W*H/26000)));
+  pts=[];
+  for(var i=0;i<count;i++){
+    pts.push({x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.16,vy:(Math.random()-.5)*.16,
+      r:Math.random()*1.1+.5});
+  }
+}
+function frame(){
+  if(!running) return;
+  cx2.clearRect(0,0,W,H);
+  for(var i=0;i<pts.length;i++){
+    var p=pts[i];
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;
+    if(p.y<0||p.y>H)p.vy*=-1;
+    cx2.beginPath(); cx2.arc(p.x,p.y,p.r,0,6.2832);
+    cx2.fillStyle='rgba('+dotRGB+',.5)'; cx2.fill();
+    for(var j=i+1;j<pts.length;j++){
+      var q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d2=dx*dx+dy*dy;
+      if(d2<16900){
+        cx2.beginPath(); cx2.moveTo(p.x,p.y); cx2.lineTo(q.x,q.y);
+        cx2.strokeStyle='rgba('+dotRGB+','+(0.16*(1-d2/16900)).toFixed(3)+')';
+        cx2.lineWidth=1; cx2.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(frame);
+}
+starColor();
+if(!reduce){
+  sizeCanvas(); frame();
+  var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(sizeCanvas,180)});
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){running=false;} else if(!running){running=true;frame();}
   });
-  Array.prototype.forEach.call(document.querySelectorAll('.entry > summary'), function(el){
-    el.addEventListener('click', function(){ tick(420); });
-  });
+} else { cv.style.display='none'; }
 
-  /* ---- scroll progress ---- */
-  var bar = document.getElementById('progress');
-  function onScroll(){
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
-    bar.style.width = Math.max(0, Math.min(100, p)) + '%';
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+/* nav + progress */
+var nav=document.getElementById('nav'), bar=document.getElementById('progress');
+var links=[].slice.call(document.querySelectorAll('.navlinks a'));
+function onScroll(){
+  var y=window.scrollY;
+  nav.classList.toggle('stuck', y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=(h>0?Math.min(100,Math.max(0,y/h*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
-  /* ---- section reveal + diagram draw ---- */
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('seen'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.08, rootMargin:'0px 0px -5% 0px'});
-    Array.prototype.forEach.call(document.querySelectorAll('.block'), function(b){ io.observe(b); });
+if('IntersectionObserver' in window){
+  var rv=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('seen'); rv.unobserve(e.target);} });
+  },{threshold:.06,rootMargin:'0px 0px -6% 0px'});
+  [].forEach.call(document.querySelectorAll('.rv'),function(n){rv.observe(n)});
 
-    var dio = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('go'); dio.unobserve(e.target); }
-      });
-    }, {threshold:0.2});
-    Array.prototype.forEach.call(document.querySelectorAll('.diagram, #growth'), function(d){ dio.observe(d); });
-  } else {
-    Array.prototype.forEach.call(document.querySelectorAll('.block'), function(b){ b.classList.add('seen'); });
-    Array.prototype.forEach.call(document.querySelectorAll('.diagram'), function(d){ d.classList.add('go'); });
-  }
+  var dg=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('go'); dg.unobserve(e.target);} });
+  },{threshold:.2});
+  [].forEach.call(document.querySelectorAll('.diagram'),function(n){dg.observe(n)});
 
-  /* growth sparkline sits in the hero, run it immediately */
-  var g = document.getElementById('growth');
-  if(g) g.classList.add('go');
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id)});
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  [].forEach.call(document.querySelectorAll('main section[id]'),function(n){spy.observe(n)});
+} else {
+  [].forEach.call(document.querySelectorAll('.rv'),function(n){n.classList.add('seen')});
+  [].forEach.call(document.querySelectorAll('.diagram'),function(n){n.classList.add('go')});
+}
+var g=document.getElementById('growth'); if(g) g.classList.add('go');
 
-  /* ---- the counter ---- */
-  var el = document.getElementById('loan-figure');
-  if(!el) return;
-  function groupIndian(n){
-    var s = String(n);
-    if(s.length <= 3) return s;
-    return s.slice(0,-3).replace(/\B(?=(\d{2})+(?!\d))/g, ',') + ',' + s.slice(-3);
-  }
-  var target = parseInt(el.getAttribute('data-target'), 10) || 0;
-  if(reduce || !target){ el.textContent = groupIndian(target); return; }
-  var t0 = null, dur = 1400;
-  el.textContent = groupIndian(0);
+/* counters */
+function groupIndian(n){
+  var s=String(n);
+  if(s.length<=3) return s;
+  return s.slice(0,-3).replace(/\B(?=(\d{2})+(?!\d))/g,',')+','+s.slice(-3);
+}
+[].forEach.call(document.querySelectorAll('.metric .n'),function(el){
+  var to=parseInt(el.getAttribute('data-to'),10);
+  var ind=el.getAttribute('data-fmt')==='in';
+  if(isNaN(to)) return;
+  if(reduce||to===0){ el.textContent = ind?groupIndian(to):String(to); return; }
+  var t0=null, dur=1500;
   requestAnimationFrame(function step(ts){
-    if(t0 === null) t0 = ts;
-    var p = Math.min((ts - t0)/dur, 1);
-    var eased = 1 - Math.pow(1 - p, 4);
-    el.textContent = groupIndian(Math.round(target * eased));
-    if(p < 1) requestAnimationFrame(step); else el.textContent = groupIndian(target);
+    if(t0===null)t0=ts;
+    var p=Math.min((ts-t0)/dur,1), e=1-Math.pow(1-p,4), v=Math.round(to*e);
+    el.textContent = ind?groupIndian(v):String(v);
+    if(p<1) requestAnimationFrame(step);
+    else el.textContent = ind?groupIndian(to):String(to);
   });
+});
 })();
 </script>
 </body>
